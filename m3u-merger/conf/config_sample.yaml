@@ -1,0 +1,5 @@
+artifacts:
+  - group: iptv
+    feeds:
+      - url: https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
+      - url: https://live.fanmingming.com/tv/m3u/ipv6.m3u
