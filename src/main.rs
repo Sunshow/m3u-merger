@@ -4,6 +4,8 @@ use std::path::{Path, PathBuf};
 use lazy_static::lazy_static;
 
 mod artifact;
+mod test;
+mod fetch;
 
 lazy_static! {
     // 获取执行程序所在目录

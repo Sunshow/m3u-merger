@@ -5,7 +5,9 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
+openssl = { version = "0.10", features = ["vendored"] }
 lazy_static = "1.4"
 serde = { version = "1.0", features = ["derive"] }
 serde_yaml = "0.9"
+reqwest = { version = "0.11", features = ["json"] }
 m3u8-rs = "5.0.4"
