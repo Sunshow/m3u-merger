@@ -397,6 +397,7 @@ version = "0.1.0"
 dependencies = [
  "lazy_static",
  "m3u8-rs",
+ "nom",
  "openssl",
  "reqwest",
  "serde",

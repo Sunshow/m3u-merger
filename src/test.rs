@@ -1,7 +1,8 @@
 #[cfg(test)]
 mod tests {
     use m3u8_rs::Playlist;
-    use crate::fetch;
+
+    use crate::{fetch, parser};
 
     #[tokio::test]
     async fn test_fetch_url() {
@@ -21,10 +22,18 @@ mod tests {
                 for segment in pl.segments {
                     println!("segment: {:?}", segment);
                 }
-            },
+            }
             Err(e) => {
                 println!("Error: {:?}", e);
             }
         }
+    }
+
+    #[tokio::test]
+    async fn test_parse_playlist() {
+        let resp = fetch::fetch_text("https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u").await.unwrap();
+
+        let (_, entries) = parser::parse_playlist(&resp).unwrap();
+        println!("entries: {:?}", entries);
     }
 }
